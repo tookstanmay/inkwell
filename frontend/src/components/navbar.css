@@ -1,0 +1,295 @@
+
+
+.header{
+    position: relative;
+    background-color: var(--eight);
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    transition: 0.3s;
+    z-index: 2;
+  }
+  nav > div{
+    background-color: var(--one);
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+  
+  }
+  .logo{
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    color: #fdfdfd;
+  }
+  .menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .quickLinks a{
+    text-decoration: none;
+    color: var(--six);
+    padding: 5px 7px;
+    transition: 0.25s;
+  }
+  .quickLinks{
+    font-weight: 500;
+    margin: 0 10px;
+  }
+  .quickLinks a:hover{
+    color: #ffffff;
+  }
+  .active{
+    color: white;
+  }
+  .authBtn{
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background-color: #fdfdfd;
+    color: var(--seven);
+    padding: 6px 18px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: 0.25s;
+    font-size: 14px;
+    font-family: 'Poppins';
+    margin-left: 20px;
+    scale: 1.05;
+  }
+  .authBtn:hover{
+    color: #fff;
+    background-color: var(--seven);
+  }
+  .authBtn:active{
+    background-color: var(--nine);
+    scale: 1;
+  }
+
+/* --------- hamburger classes ---------- */
+.burger-menu{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.burger-bar{
+    width: 26px;
+    height: 4px;
+    background-color: white;
+    margin: 2px 0px;
+}
+.burger-bar.unclicked{
+    transform: rotate(0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+.burger-bar.clicked:nth-child(1){
+  width: 20px;
+  transition: ease-out 0.5s;
+  transform: rotate(320deg) translateX(-5px) translateY(13px);
+  background-color: var(--five);
+}
+.burger-bar.clicked:nth-child(2){
+  transition: ease-out 0.5s;
+  background-color: var(--five);
+  transform: rotate(360deg) translateX(-4px) translateY(0px);
+}
+.burger-bar.clicked:nth-child(3){
+  width: 20px;
+    transition: ease-out 0.5s;
+    transform: rotate(400deg) translateX(-5px) translateY(-13px);
+    background-color: var(--five);
+}
+  @media screen and (max-width: 633px) {
+    nav > div{
+      justify-content: space-between;
+      padding: 0 25px;
+    }
+    .menu{
+        transition: 0.5s;
+        align-items: end;
+        padding-right: 20px;
+    }
+    .slider{
+        display: flex;
+        background-color: var(--three);
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: 100%;
+        width: 100%;
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.250) 0.5s;
+        height: 15.5rem;
+    }
+    .slider.minwidth{
+        left: 100%;
+    }
+    .slider.maxwidth{
+        left: 0;
+    }
+    .menu.hidden{
+        display: none;
+    }
+    .menu.visible{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .menu > div{
+        margin: 10px 0;
+    }
+    .authBtn{
+        margin-left: 0;
+        margin: 10px 7px 10px 0;
+    }
+    .burger-menu{
+        display: flex;
+    }
+    header.minheight{
+      height: 80px;
+    }
+    header.maxheight{
+      height: 20.5rem;
+    }
+  }
+
+  /* ************* // Login Form // ************** */
+  
+  .login-form, .signup-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 40px 0;
+    width: 350px;
+    padding: 25px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    background-color: white;
+}
+.login-form-containers, .signup-form-containers{
+  margin: 10px 0;
+  width: 100%;
+}
+.login-input, .signup-input{
+    font-family: 'Poppins';
+    width: 300px;
+    outline: none;
+    resize: none;
+    border: 1px solid #8e959b;
+    padding: 7px 15px;
+    margin: 5px 0;
+    font-size: 16px;
+    border-radius: 3px;
+}
+.login-input:focus, .signup-input:focus{
+  outline: 4px solid #bfdeff;
+}
+.login-labels, .signup-labels{
+  float: left;
+  font-size: 14px;
+}
+
+#loginBtn{
+  float: right;
+  background: var(--ten);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  height: 34px;
+  width: 70px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+  scale: 1.1;
+}
+#loginBtn:disabled{
+  background-color: var(--eleven);
+    scale: 1.1;
+  }
+  #loginBtn:active:valid{
+    background-color: var(--eleven);
+    scale: 1;
+  }
+  #signupBtn{
+    float: right;
+    background: var(--twelve);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 34px;
+    width: 70px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+    scale: 1.1;
+  }
+#signupBtn:disabled{
+    background-color: var(--thirteen);
+      scale: 1.1;
+    }
+#signupBtn:active:valid{
+      background-color: var(--thirteen);
+      scale: 1;
+    }
+
+/* ********** // Alert.js styling // ********** */
+
+.alert {
+  padding: 15px;
+  border: 1px solid;
+  border-radius: 6px;
+  display: flex;
+  height: 20px;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+}
+
+.alert.alert-success {
+  background-color: var(--success);
+  border-color: #a3cfbb;
+  color: #0a3622;
+}
+
+.alert.alert-danger {
+  background-color: var(--danger);
+  border-color: #f1aeb5;
+  color: #58151c;
+}
+.alert.alert-primary {
+  background-color: var(--primary);
+  border-color: #9ec5fe;
+  color: #052c65;
+}
+.alert.alert-warning {
+  background-color: var(--warning);
+  border-color: #ffe69c;
+  color: #664d03;
+}
+.alert.alert-info {
+  background-color: var(--info);
+  border-color: #9eeaf9;
+  color: #055160;
+}
+
+.alert-message {
+  margin-right: 10px;
+}
+
+.close-btn {
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: transparent;
+  cursor: pointer;
+}

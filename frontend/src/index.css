@@ -1,0 +1,38 @@
+*{
+  margin: 0;padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+:root {
+  --one: #1B262C;
+  --two: #CE5959;
+  --three: #0F4C75;
+  --four: #F1F6F9;
+  --five: #E5D1FA;
+  --six: rgb(196, 212, 230);
+  --seven: #bf4e4e;
+  --eight: rgb(230, 156, 18);
+  --nine: #b24242;
+  --ten: #0aa2c0;
+  --eleven: #0b91ac;
+  --twelve: rgb(0, 163, 57);
+  --thirteen: rgb(0, 128, 45);
+  --primary:  #cce5ff;
+  --success: #d1e7dd;
+  --danger: #f8d7da;
+  --warning: #fff3cd;
+  --info:  #d1ecf1;
+}
+body {
+  background-color: var(--four);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins';
+}
+
+.margin{
+  margin-top: 80px;
+}
+
+.App{
+  text-align: center;
+}
