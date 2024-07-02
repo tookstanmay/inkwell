@@ -7,8 +7,7 @@
         "use": "@vercel/build",
         "config": {
           "buildCommand": "npm run build"
-        },
-        "outDir": "dist" 
+        }
       }
     ],
     "routes": [
