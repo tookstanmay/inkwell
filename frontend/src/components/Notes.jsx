@@ -2,9 +2,9 @@
 
 import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import noteContext from "../context/notes/noteContext.js";
-import NoteItem from "./NoteItem.js";
-import AddNote from "./AddNote.js";
+import noteContext from "../context/notes/noteContext.jsx";
+import NoteItem from "./NoteItem.jsx";
+import AddNote from "./AddNote.jsx";
 import "./modal.css";
 import "./home.css";
 

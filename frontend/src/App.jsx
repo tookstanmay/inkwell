@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { About } from "./components/About.js";
-import { Home } from "./components/Home.js";
-import { Navbar } from "./components/Navbar.js";
-import NoteState from "./context/notes/NoteState.js";
-import Login from "./components/Login.js";
-import Signup from "./components/Signup.js";
+import { About } from "./components/About.jsx";
+import { Home } from "./components/Home.jsx";
+import { Navbar } from "./components/Navbar.jsx";
+import NoteState from "./context/notes/NoteState.jsx";
+import Login from "./components/Login.jsx";
+import Signup from "./components/Signup.jsx";
 import "./components/navbar.css";
-import Alert from "./components/Alert.js";
-import { Contact } from "./components/Contact.js";
-import { Github } from "./components/Github.js";
+import Alert from "./components/Alert.jsx";
+import { Contact } from "./components/Contact.jsx";
+import { Github } from "./components/Github.jsx";
 
 function App() {
   const [alert, setAlert] = useState(null);

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import noteContext from "./noteContext.js";
+import noteContext from "./noteContext.jsx";
 
 const NoteState = (props) => {
   const host = "https://inotebook-lightning.vercel.app";

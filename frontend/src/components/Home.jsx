@@ -1,5 +1,5 @@
 import React from "react";
-import Notes from "./Notes.js";
+import Notes from "./Notes.jsx";
 
 export const Home = () => {
   return (

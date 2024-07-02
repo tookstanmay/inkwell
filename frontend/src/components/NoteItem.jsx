@@ -1,7 +1,7 @@
 // jshint esversion: 6
 
 import React, { useContext } from "react";
-import noteContext from "../context/notes/noteContext.js";
+import noteContext from "../context/notes/noteContext.jsx";
 import "./home.css";
 
 const NoteItem = (props) => {
