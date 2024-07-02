@@ -1,16 +1,16 @@
 {
     "version": 2,
-    "name": "inotebook",
+    "name": "inkwell",
     "builds": [
        { 
-        "src": "/src/index.js", 
+        "src": "./src/main.jsx", 
         "use": "@vercel/node" 
     }
     ],
     "routes": [
        { 
         "src": "/(.*)", 
-        "dest": "/src/index.js" 
+        "dest": "./src/main.jsx" 
     }
     ]
  }
