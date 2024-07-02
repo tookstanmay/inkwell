@@ -36,3 +36,217 @@ body {
 .App{
   text-align: center;
 }
+
+
+/* About.css */
+
+.about-inkwell {
+  max-width: 800px; /* Adjust as needed for responsiveness */
+  margin: 50px auto; /* Center the container horizontally and with some top/bottom margin */
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #f5f5f5; /* Light background for better readability */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: sans-serif; /* Base font family for consistent text */
+}
+
+.about-title {
+  margin-bottom: 20px;
+  font-size: 2em; /* Larger title size */
+  font-weight: bold; /* Bold for emphasis */
+  text-align: center; /* Center the title within the container */
+}
+
+.about-description {
+  line-height: 1.5; /* Slightly increase line spacing for readability */
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.about-key-features,
+.about-benefits {
+  margin-bottom: 30px; /* Consistent spacing between sections */
+  text-align: left;
+}
+
+.about-key-features h2,
+.about-benefits h2 {
+  margin-bottom: 15px; /* Spacing for section headings */
+  font-size: 1.2em; /* Slightly smaller heading size */
+}
+
+.about-features-list,
+.about-benefits-list {
+  list-style: disc; /* Bullet points for lists */
+  padding: 0; /* Remove default list padding */
+  margin-bottom: 0; /* Remove default list bottom margin */
+}
+
+.about-features-list li,
+.about-benefits-list li {
+  margin-bottom: 10px; /* Spacing between list items */
+}
+
+.about-cta {
+  display: inline-block; /* Display as an inline block for proper button styling */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333; /* Darker blue for the button */
+  color: #fff; /* White text for contrast */
+  font-weight: bold;
+  text-decoration: none; /* Remove underline from default link styling */
+  cursor: pointer; /* Indicate clickable behavior */
+  transition: background-color 0.2s ease-in-out; /* Smooth transition on hover */
+}
+
+.about-cta:hover {
+  background-color: #222; /* Darker shade on hover for visual feedback */
+}
+
+
+/* contact.css */
+
+.contact-container {
+  max-width: 800px; /* Adjust as needed for responsiveness */
+  margin: 50px auto; /* Center the container horizontally and with some top/bottom margin */
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #f5f5f5; /* Light background for better readability */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: sans-serif; /* Base font family for consistent text */
+}
+
+.contact-title {
+  margin-bottom: 20px;
+  font-size: 2em; /* Larger title size */
+  font-weight: bold; /* Bold for emphasis */
+  text-align: center; /* Center the title within the container */
+}
+
+.contact-description {
+  line-height: 1.5; /* Slightly increase line spacing for readability */
+  margin-bottom: 30px;
+}
+
+.contact-methods {
+  margin-bottom: 30px;
+}
+
+.contact-methods h2 {
+  margin-bottom: 15px; /* Spacing for section headings */
+  font-size: 1.2em; /* Slightly smaller heading size */
+}
+
+.contact-methods-list-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-methods-list {
+  list-style: none; /* Remove bullet points for a cleaner look */
+  padding: 0; /* Remove default list padding */
+  text-align: left;
+}
+
+.contact-link {
+  color: #333; /* Darker blue for links */
+  text-decoration: none; /* Remove underline from default link styling */
+  transition: color 0.2s ease-in-out; /* Smooth transition on hover */
+}
+
+.contact-link:hover {
+  color: #007bff; /* Blue on hover for*/
+}
+
+.logos {
+  height: 30px;
+}
+
+/* Github.css */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns of equal width */
+  grid-gap: 10px; /* Spacing between cards */
+}
+
+.project-container {
+  max-width: 800px; /* Adjust as needed for responsiveness */
+  margin: 50px auto; /* Center the container horizontally and with some top/bottom margin */
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #f5f5f5; /* Light background for better readability */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: sans-serif; /* Base font family for consistent text */
+}
+
+.project-list {
+  margin-top: 30px;
+  display: grid; /* Use grid layout for default mode */
+  grid-template-columns: 400px 400px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 877px) {
+  .project-container {
+    max-width: 500px;
+  }
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 583px) {
+  .project-container {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 487px) {
+  .project-container {
+    max-width: 300px;
+  }
+}
+
+.project-card {
+  display: flex; /* Allow for project titles and descriptions (if added) */
+  flex-direction: row; /* Stack title and description vertically */
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50px;
+  width: 280px; /* Calculate card width based on desired columns (adjust as needed) */
+  margin: 10px; /* Spacing between cards */
+  padding: 15px; /* Padding within cards */
+  border: 1px solid #ddd; /* Light border for card separation */
+  border-radius: 10px; /* Rounded corners for cards */
+  background-color: #fff; /* White background for cards */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  list-style: none;
+}
+
+.project-link {
+  text-decoration: none; /* Remove underline from default link styling */
+  color: #333; /* Darker blue for links */
+  transition: color 0.2s ease-in-out; /* Smooth transition on hover */
+}
+
+.project-link:hover {
+  color: #007bff; /* Blue on hover for emphasis */
+}
+
+.project-title {
+  margin-bottom: 5px; /* Spacing between title and description (if added) */
+  font-weight: bold; /* Emphasize project titles */
+}
+
+/* Add additional styles for project descriptions (if used) */
+.project-description {
+  font-size: 0.8rem; /* Smaller font size for descriptions */
+  color: #666; /* Grayish color for descriptions */
+}
+
+

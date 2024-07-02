@@ -8,6 +8,8 @@ import Login from "./components/Login.js";
 import Signup from "./components/Signup.js";
 import "./components/navbar.css";
 import Alert from "./components/Alert.js";
+import { Contact } from "./components/Contact.js";
+import { Github } from "./components/Github.js";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -32,6 +34,12 @@ function App() {
           <Switch>
             <Route key={"about"} exact path="/about">
               <About />
+            </Route>
+            <Route key={"contact"} exact path="/contact">
+              <Contact />
+            </Route>
+            <Route key={"github"} exact path="/github">
+              <Github />
             </Route>
             <Route key={"home"} exact path="/">
               <Home />

@@ -14,8 +14,15 @@ const Notes = () => {
 
   let history = useHistory();
   useEffect(() => {
+
+    const getting_notes = async () => {
+      await getNotes();
+      setTimeout(2000);
+      return;
+    }
+
     if (localStorage.getItem("token")) {
-      getNotes();
+      getting_notes();
     } else {
       history.push("/login");
     }

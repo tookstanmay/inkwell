@@ -41,7 +41,7 @@ export const Navbar = (props) => {
       <header className={header}>
         <nav>
           <div>
-            <div className="logo">inotebook</div>
+            <div className="logo">inkwell</div>
             <div className="burger-menu" onClick={updateMenu}>
               <div className={burger_class}></div>
               <div className={burger_class}></div>
@@ -61,9 +61,8 @@ export const Navbar = (props) => {
                 <div className="quickLinks">
                   <Link to="/about">
                     <span
-                      className={`${
-                        location.pathname === "/about" ? "active" : ""
-                      }`}
+                      className={`${location.pathname === "/about" ? "active" : ""
+                        }`}
                     >
                       About
                     </span>
@@ -72,9 +71,8 @@ export const Navbar = (props) => {
                 <div className="quickLinks">
                   <Link to="/contact">
                     <span
-                      className={`${
-                        location.pathname === "/contact" ? "active" : ""
-                      }`}
+                      className={`${location.pathname === "/contact" ? "active" : ""
+                        }`}
                     >
                       Contact
                     </span>
