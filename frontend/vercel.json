@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "inkwell",
+    "name": "inkwell-engine",
     "builds": [
       {
         "src": "src",
