@@ -2,15 +2,20 @@
     "version": 2,
     "name": "inkwell",
     "builds": [
-       { 
-        "src": "/src/main.jsx", 
-        "use": "@vercel/node" 
-    }
+      {
+        "src": "src",
+        "use": "@vercel/build",
+        "config": {
+          "buildCommand": "npm run build"
+        },
+        "outDir": "dist" 
+      }
     ],
     "routes": [
-       { 
-        "src": "/(.*)", 
-        "dest": "/src/main.jsx"
-    }
+      {
+        "src": "/(.*)",
+        "dest": "/index.html" 
+      }
     ]
- }
+  }
+  
