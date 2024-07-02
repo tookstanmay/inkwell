@@ -3,14 +3,14 @@
     "name": "inkwell",
     "builds": [
        { 
-        "src": "./src/main.jsx", 
+        "src": "/src/main.jsx", 
         "use": "@vercel/node" 
     }
     ],
     "routes": [
        { 
         "src": "/(.*)", 
-        "dest": "./src/main.jsx" 
+        "dest": "/src/main.jsx" 
     }
     ]
  }
