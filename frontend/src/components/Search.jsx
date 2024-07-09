@@ -159,7 +159,7 @@ const Search = () => {
         onChange={handleChange}
       />
       <button type="submit" style={{display: "flex", alignItems: "center", justifyContent: "center", margin: "0 10px"}}>
-        <img src="./public/images/magnifying-glass.png" alt="" style={{height: "28px"}} />
+        <img src="./images/magnifying-glass.png" alt="" style={{height: "28px"}} />
       </button>
     </form>
     {

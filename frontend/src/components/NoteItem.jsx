@@ -39,7 +39,7 @@ const NoteItem = (props) => {
       <div className="crud-container">
 <div className="crud-icons-container">
 <img
-          src="./public/images/trash-bin.png"
+          src="./images/trash-bin.png"
           alt="trash--v1"
           className="crud-icons"
           onClick={() => {
@@ -49,7 +49,7 @@ const NoteItem = (props) => {
 </div>
 <div className="crud-icons-container">
 <img
-          src="./public/images/scripting.png"
+          src="./images/scripting.png"
           alt="create-new"
           className="crud-icons"
           onClick={() => {
