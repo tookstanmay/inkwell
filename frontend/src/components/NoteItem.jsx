@@ -3,6 +3,7 @@
 import React, { useContext } from "react";
 import noteContext from "../context/notes/noteContext.jsx";
 import "./home.css";
+import "./modal.css";
 
 const NoteItem = (props) => {
   const context = useContext(noteContext);
@@ -36,26 +37,26 @@ const NoteItem = (props) => {
         #{note.tag}
       </div>
       <div className="crud-container">
-        <img
-          width="24"
-          height="24"
-          src="https://img.icons8.com/material-outlined/48/FFFFFF/trash--v1.png"
+<div className="crud-icons-container">
+<img
+          src="./public/images/trash-bin.png"
           alt="trash--v1"
           className="crud-icons"
           onClick={() => {
             deleteNote(note._id);
           }}
         />
-        <img
-          width="24"
-          height="24"
-          src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/create-new.png"
+</div>
+<div className="crud-icons-container">
+<img
+          src="./public/images/scripting.png"
           alt="create-new"
           className="crud-icons"
           onClick={() => {
             updateNote(note);
           }}
         />
+</div>
       </div>
     </div>
   );

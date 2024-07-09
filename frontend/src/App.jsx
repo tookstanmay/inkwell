@@ -10,6 +10,7 @@ import "./components/navbar.css";
 import Alert from "./components/Alert.jsx";
 import { Contact } from "./components/Contact.jsx";
 import { Github } from "./components/Github.jsx";
+import Search from "./components/Search.jsx";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -34,6 +35,9 @@ function App() {
           <Switch>
             <Route key={"about"} exact path="/about">
               <About />
+            </Route>
+            <Route key={"search"} exact path="/search">
+              <Search />
             </Route>
             <Route key={"contact"} exact path="/contact">
               <Contact />

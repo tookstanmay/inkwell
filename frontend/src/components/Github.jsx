@@ -37,7 +37,7 @@ export const Github = () => {
             <ul className="project-list">
                 {projects.filter((project) => titles.includes(project.name))
                     .map((project) => (
-                        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%", width: "100%" }}>
+                        <div key={project.name} style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%", width: "100%" }}>
                             <li key={project.id} className="project-card">
                                 <a href={project.html_url} target='__blank' >
                                     <img src='./images/github.png' className='logos' />
@@ -51,7 +51,7 @@ export const Github = () => {
                                     <h3 className="project-title">{formatted_titles[project.name]}</h3>
                                 </span>
                                 <a href={projects_links[project.name]} target='__blank'>
-                                    <img src='./images/monster.png' className='logos' />
+                                    <img src='./images/terminal.png' className='logos' />
                                 </a>
                             </li>
                         </div>

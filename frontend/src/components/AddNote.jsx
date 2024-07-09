@@ -23,7 +23,7 @@ const AddNote = () => {
     event.preventDefault();
 
     if (text.tag === "") {
-      addNote(text.title, text.description, "#nothing");
+      addNote(text.title, text.description, "nothing");
     } else {
       addNote(text.title, text.description, text.tag);
     }
@@ -31,7 +31,7 @@ const AddNote = () => {
   };
   
   return (
-    <div className="margin">
+    <div>
       <form action="" className="addNoteForm">
         <input
           className="addNoteInput"
@@ -78,7 +78,7 @@ const AddNote = () => {
           id="add"
           onClick={handleClick}
         >
-          +
+          <span style={{fontSize: "30px"}}>+</span>
         </button>
       </form>
     </div>

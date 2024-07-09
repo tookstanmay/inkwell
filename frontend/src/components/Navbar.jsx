@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import "./navbar.css";
 
@@ -12,6 +12,9 @@ export const Navbar = (props) => {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
   const [slider, setSliderClass] = useState("slider minheight");
   const [header, setHeaderClass] = useState("header minheight");
+
+  const navbarRef = useRef(null);
+  const prevLocation = useRef(location); // Store previous location
 
   const updateMenu = () => {
     if (!isMenuClicked) {
@@ -28,6 +31,7 @@ export const Navbar = (props) => {
       setMenuClass("menu hidden");
     }
     setIsMenuClicked(!isMenuClicked);
+
   };
 
   const handleLogout = async () => {
@@ -36,9 +40,40 @@ export const Navbar = (props) => {
     updateMenu();
     showAlert("primary", "Successfully logged out!");
   };
+
+  const closeMenu = () => {
+    setSliderClass("slider minwidth");
+    setHeaderClass("header minheight");
+    setBurgerClass("burger-bar unclicked");
+    setMenuClass("menu hidden");
+    setIsMenuClicked(false);
+  };
+
+  // Close menu on outside click (using useEffect)
+  useEffect(() => {
+
+    // Close menu on route change
+    if (prevLocation.current.pathname !== location.pathname) {
+      closeMenu();
+      prevLocation.current = location; // Update previous location
+    }
+
+    const handleClickOutside = (event) => {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        closeMenu();
+      }
+    };
+
+    // Add event listener on mount
+    document.addEventListener("click", handleClickOutside);
+
+    // Cleanup function to remove listener on unmount
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [navbarRef, location]); // Dependency array includes navbarRef
+
   return (
     <>
-      <header className={header}>
+      <header className={header} ref={navbarRef}>
         <nav>
           <div>
             <div className="logo">inkwell</div>
@@ -55,6 +90,15 @@ export const Navbar = (props) => {
                       className={`${location.pathname === "/" ? "active" : ""}`}
                     >
                       Home
+                    </span>
+                  </Link>
+                </div>
+                <div className="quickLinks">
+                  <Link to="/search">
+                    <span
+                      className={`${location.pathname === "/search" ? "active" : ""}`}
+                    >
+                      Search
                     </span>
                   </Link>
                 </div>

@@ -1,20 +1,34 @@
-// jshint esversion: 6
-
-import React, { useContext, useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
-import noteContext from "../context/notes/noteContext.jsx";
-import NoteItem from "./NoteItem.jsx";
-import AddNote from "./AddNote.jsx";
-import "./modal.css";
+import React, { useContext, useEffect, useState } from 'react';
+import './search.css'; // Import your CSS file for styling
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import noteContext from '../context/notes/noteContext';
+import NoteItem from './NoteItem';
 import "./home.css";
+import "./modal.css";
 
-const Notes = () => {
+const Search = () => {
+  const [searchTerm, setSearchTerm] = useState("");
   const context = useContext(noteContext);
   const { notes, getNotes, editNote } = context;
 
-  let history = useHistory();
-  useEffect(() => {
+  const handleChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
 
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent default form submission behavior
+    // Add your search logic here, e.g., using searchTerm to filter data
+  };
+
+  const handleReset = (event) => {
+    event.preventDefault(); // Prevent default form submission behavior
+    setSearchTerm("");
+  }
+
+
+  let history = useHistory();
+
+  useEffect(() => {
     const getting_notes = async () => {
       await getNotes();
       setTimeout(2000);
@@ -73,10 +87,10 @@ const Notes = () => {
     document.body.classList.remove("active-modal");
   }
 
+
   return (
     <>
-      <AddNote />
-      <div>
+    <div>
         {modal && (
           <div className="modal">
             <div onClick={toggleModal} className="overlay"></div>
@@ -135,16 +149,39 @@ const Notes = () => {
             </div>
           </div>
         )}
-      </div>
-      <div>
+    </div>
+    <h2 style={{marginTop: "20px"}}>Search by TAG</h2>
+    <form className="search-bar" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="Search..."
+        value={searchTerm}
+        onChange={handleChange}
+      />
+      <button type="submit" style={{display: "flex", alignItems: "center", justifyContent: "center", margin: "0 10px"}}>
+        <img src="./public/images/magnifying-glass.png" alt="" style={{height: "28px"}} />
+      </button>
+    </form>
+    {
+        searchTerm !== "" ? (
+            <div>
+                <button type="reset" className="about-cta" onClick={handleReset}>
+                <span style={{fontSize: "14px"}}>Clear</span>
+                </button>
+            </div>
+        ) : <div></div>
+    }
+    <div>
         <div style={{ marginTop: "40px" }}>
           {notes.length === 0 && "Nothing to display..."}
         </div>
         <div className="displayNote">
           {notes.map((note) => {
-            return (
-              <NoteItem key={note._id} note={note} updateNote={updateNote} />
-            );
+            if (note.tag === searchTerm) {
+                return (
+                  <NoteItem key={note._id} note={note} updateNote={updateNote} />
+                );
+            }
           })}
         </div>
       </div>
@@ -152,4 +189,4 @@ const Notes = () => {
   );
 };
 
-export default Notes;
+export default Search;

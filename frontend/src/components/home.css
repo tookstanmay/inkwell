@@ -4,7 +4,7 @@
 .addNoteForm{
     position: relative;
     width: 350px;
-    margin: 60px auto 20px auto;
+    margin: 40px auto 20px auto;
     background: #fff;
     padding: 15px;
     border-radius: 10px;
@@ -24,7 +24,7 @@
     position: absolute;
     right: 18px;
     bottom: -18px;
-    background: var(--two);
+    background-image: radial-gradient( circle 975px at 2.6% 48.3%,  rgba(0,8,120,1) 0%, rgba(95,184,224,1) 99.7% );
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -37,7 +37,8 @@
     scale: 1.1;
 }
 #add:disabled{
-    background-color: var(--homeOne);
+    /* background-color: var(--homeOne); */
+    background-image: radial-gradient( circle 860px at 11.8% 33.5%,  rgb(205, 20, 76) 0%, rgb(201, 34, 56) 30.5%, rgba(249,75,37,1) 56.1%, rgba(250,88,19,1) 75.6%, rgba(253,102,2,1) 100.2% );
     scale: 1.1;
 }
 #add:active:valid{
@@ -63,15 +64,26 @@
     margin: 10px 12px 0px 12px;
     z-index: 1;
 }
-.crud-icons{
-    background-color: var(--two);
+.crud-icons-container{
+    height: 25px;
+    width: 25px;
+    background-image: linear-gradient( 109.6deg,  rgba(61,131,97,1) 11.2%, rgba(28,103,88,1) 91.1% );
     padding: 5px;
-    border-radius: 6px;
     scale: 1.1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.crud-icons:active{
+.crud-icons{
+    height: 20px;
+    width: 20px;
+}
+.crud-icons-container:active{
     scale: 1;
-    background-color: var(--seven);
+    background-image: linear-gradient( 109.6deg,  rgb(50, 110, 81) 11.2%, rgb(19, 91, 76) 91.1% );
 }
 
 .displayNote{
