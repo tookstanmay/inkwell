@@ -34,6 +34,9 @@ export const Contact = () => {
                     </ul>
                 </div>
             </div>
+            <footer style={{marginTop: "80px"}}>
+                made with ❤️ by tookstanmay
+            </footer>
         </div>
     );
 };
